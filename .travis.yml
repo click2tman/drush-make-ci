@@ -7,16 +7,16 @@ php:
 env:
   global:
     # Your Pantheon site's UUID (e.g. from your dashboard URL)
-    - PUUID='7b67ea8d-0c67-41ec-9358-147b74181022'
+    - PUUID='5729a74b-dab1-46c7-b884-4d350eea462d'
 
     # Your Pantheon site's name.
-    - PNAME='drush-make-example'
+    - PNAME='Behat drush-make-example'
 
     # The Pantheon environment to test against.
     - PENV='dev'
 
     # The user you interact with Pantheon as
-    - PEMAIL='josh+travis@getpantheon.com'
+    - PEMAIL='tamba@tambalamin.me'
 
     # A random password for the Drupal site install.
     - RANDPASS=$(cat /dev/urandom | env LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1 )
@@ -75,6 +75,6 @@ after_failure:
 notifications:
   email:
     recipients:
-      # - panopoly-ci@googlegroups.com
+       - tamba@tambalamin.me
     on_success: always
     on_failure: always
